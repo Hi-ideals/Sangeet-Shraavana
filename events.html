@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Events — Sangeet Shraavana</title>
+<meta name="description" content="Upcoming recitals, workshops and gatherings at Sangeet Shraavana, Bidar." />
+<link rel="canonical" href="https://www.sangeetshraavana.in/events.html" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Events — Sangeet Shraavana" />
+<meta property="og:description" content="Upcoming recitals, workshops and gatherings at Sangeet Shraavana, Bidar." />
+<meta property="og:url" content="https://www.sangeetshraavana.in/events.html" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Events — Sangeet Shraavana" />
+<meta name="twitter:description" content="Upcoming recitals, workshops and gatherings at Sangeet Shraavana, Bidar." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Kannada:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { ink: "#0a0f2b", ivory: "#eef3fb", wine: "#1e3a76", gold: "#d9a441", amber: "#e8b64f", muted: "#57678a" },
+        fontFamily: {
+          display: ["Bellefair", "serif"],
+          body: ["Poppins", "sans-serif"],
+          kannada: ["Noto Sans Kannada", "sans-serif"],
+        },
+      },
+    },
+  };
+</script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+<link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body class="font-body bg-ivory text-ink antialiased">
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div id="site-header"></div>
+
+<main id="main-content">
+  <section class="page-hero pt-40 pb-24 text-ivory">
+    <div class="relative max-w-4xl mx-auto px-5 sm:px-8 text-center reveal">
+      <h1 class="font-display text-4xl sm:text-5xl mb-5">Events</h1>
+      <p class="text-ivory/70 text-lg max-w-xl mx-auto">Recitals, workshops, and gatherings across the year.</p>
+    </div>
+  </section>
+
+  <section class="py-20 sm:py-28">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8">
+      <div id="events-list" class="space-y-12">
+        <!-- rendered by js/events.js -->
+      </div>
+    </div>
+  </section>
+
+  <hr class="gradient-line max-w-7xl mx-auto" />
+
+  <section class="py-20 sm:py-28 bg-ink text-ivory">
+    <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center reveal">
+      <h2 class="font-display text-3xl sm:text-4xl mb-4">Never miss an event</h2>
+      <p class="text-ivory/70 text-lg mb-8">Follow us or get in touch to be notified about upcoming recitals and workshops.</p>
+      <a href="contact.html" class="inline-flex items-center gap-2 gradient-bg text-ivory px-8 py-4 rounded-full font-medium hover:opacity-90 transition-opacity">
+        Stay in touch <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/content.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/decor.js"></script>
+<script src="js/events.js"></script>
+<script>
+  window.addEventListener("load", () => { if (window.lucide) window.lucide.createIcons(); });
+</script>
+</body>
+</html>

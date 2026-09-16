@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stay Connected — Sangeet Shraavana</title>
+<meta name="description" content="Register your interest in Sangeet Shraavana programs — attend, perform, or volunteer with Dr. Ishwar Koujalgi Memorial Charitable Trust, Bidar." />
+<link rel="canonical" href="https://www.sangeetshraavana.in/registration.html" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Stay Connected — Sangeet Shraavana" />
+<meta property="og:description" content="Register your interest in Sangeet Shraavana programs — attend, perform, or volunteer with the trust." />
+<meta property="og:url" content="https://www.sangeetshraavana.in/registration.html" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Stay Connected — Sangeet Shraavana" />
+<meta name="twitter:description" content="Register your interest in Sangeet Shraavana programs — attend, perform, or volunteer with the trust." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Kannada:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { ink: "#0a0f2b", ivory: "#eef3fb", wine: "#1e3a76", gold: "#d9a441", amber: "#e8b64f", muted: "#57678a" },
+        fontFamily: {
+          display: ["Bellefair", "serif"],
+          body: ["Poppins", "sans-serif"],
+          kannada: ["Noto Sans Kannada", "sans-serif"],
+        },
+      },
+    },
+  };
+</script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+<link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body class="font-body bg-ivory text-ink antialiased">
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div id="site-header"></div>
+
+<main id="main-content">
+  <section class="page-hero pt-40 pb-24 text-ivory">
+    <div class="relative max-w-4xl mx-auto px-5 sm:px-8 text-center reveal">
+      <h1 class="font-display text-4xl sm:text-5xl mb-5">Stay connected</h1>
+      <p class="text-ivory/70 text-lg max-w-xl mx-auto">Let us know how you'd like to be involved with Sangeet Shraavana — we'll be in touch.</p>
+    </div>
+  </section>
+
+  <section class="py-20 sm:py-28">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8">
+      <form id="registration-form" class="reveal" novalidate>
+        <div class="grid sm:grid-cols-2 gap-5 mb-5">
+          <div>
+            <label for="reg-name" class="block text-sm font-medium mb-2">Your name</label>
+            <input type="text" id="reg-name" name="name" data-validate="required" class="w-full border border-ink/20 rounded-lg px-4 py-3 focus:border-wine transition-colors" />
+            <p id="reg-name-error" class="form-error text-wine text-xs mt-1" role="alert"></p>
+          </div>
+          <div>
+            <label for="reg-phone" class="block text-sm font-medium mb-2">Phone</label>
+            <input type="tel" id="reg-phone" name="phone" data-validate="required phone" class="w-full border border-ink/20 rounded-lg px-4 py-3 focus:border-wine transition-colors" />
+            <p id="reg-phone-error" class="form-error text-wine text-xs mt-1" role="alert"></p>
+          </div>
+        </div>
+
+        <div class="mb-5">
+          <label for="reg-email" class="block text-sm font-medium mb-2">Email</label>
+          <input type="email" id="reg-email" name="email" data-validate="required email" class="w-full border border-ink/20 rounded-lg px-4 py-3 focus:border-wine transition-colors" />
+          <p id="reg-email-error" class="form-error text-wine text-xs mt-1" role="alert"></p>
+        </div>
+
+        <div class="mb-5">
+          <label for="reg-interest" class="block text-sm font-medium mb-2">I'm interested in</label>
+          <select id="reg-interest" name="interest" data-validate="required" class="w-full border border-ink/20 rounded-lg px-4 py-3 focus:border-wine transition-colors bg-ivory">
+            <option value="">Select an option</option>
+            <option>Attending upcoming events</option>
+            <option>Performing at a Sangeet Shraavana program</option>
+            <option>Being considered for felicitation</option>
+            <option>Volunteering with the trust</option>
+            <option>Supporting the trust's work</option>
+          </select>
+          <p id="reg-interest-error" class="form-error text-wine text-xs mt-1" role="alert"></p>
+        </div>
+
+        <div class="mb-6">
+          <label for="reg-notes" class="block text-sm font-medium mb-2">Anything we should know? (optional)</label>
+          <textarea id="reg-notes" name="notes" rows="4" class="w-full border border-ink/20 rounded-lg px-4 py-3 focus:border-wine transition-colors"></textarea>
+        </div>
+
+        <button type="submit" class="gradient-bg text-ivory px-8 py-4 rounded-full font-medium hover:opacity-90 transition-opacity w-full sm:w-auto">
+          Submit
+        </button>
+
+        <p class="form-success hidden mt-5 text-sm text-wine font-medium" role="status">
+          Thank you — we've received your details and will be in touch soon.
+        </p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/content.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/decor.js"></script>
+<script src="js/form.js"></script>
+<script>
+  window.addEventListener("load", () => { if (window.lucide) window.lucide.createIcons(); });
+</script>
+</body>
+</html>

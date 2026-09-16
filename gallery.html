@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gallery — Sangeet Shraavana</title>
+<meta name="description" content="Photos from felicitations, recitals and events at Sangeet Shraavana, Bidar." />
+<link rel="canonical" href="https://www.sangeetshraavana.in/gallery.html" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Gallery — Sangeet Shraavana" />
+<meta property="og:description" content="Photos from felicitations, recitals and events at Sangeet Shraavana, Bidar." />
+<meta property="og:url" content="https://www.sangeetshraavana.in/gallery.html" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Gallery — Sangeet Shraavana" />
+<meta name="twitter:description" content="Photos from felicitations, recitals and events at Sangeet Shraavana, Bidar." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Kannada:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { ink: "#0a0f2b", ivory: "#eef3fb", wine: "#1e3a76", gold: "#d9a441", amber: "#e8b64f", muted: "#57678a" },
+        fontFamily: {
+          display: ["Bellefair", "serif"],
+          body: ["Poppins", "sans-serif"],
+          kannada: ["Noto Sans Kannada", "sans-serif"],
+        },
+      },
+    },
+  };
+</script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+<link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body class="font-body bg-ivory text-ink antialiased">
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div id="site-header"></div>
+
+<main id="main-content">
+  <section class="page-hero pt-40 pb-24 text-ivory">
+    <div class="relative max-w-4xl mx-auto px-5 sm:px-8 text-center reveal">
+      <h1 class="font-display text-4xl sm:text-5xl mb-5">Gallery</h1>
+      <p class="text-ivory/70 text-lg max-w-xl mx-auto">Moments from felicitations, recitals, and events.</p>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="flex flex-wrap gap-3 mb-10 reveal" role="group" aria-label="Filter gallery by category">
+        <button data-gallery-filter="all" class="is-active px-5 py-2 rounded-full text-sm font-medium border border-ink/15">All</button>
+        <button data-gallery-filter="recitals" class="px-5 py-2 rounded-full text-sm font-medium border border-ink/15">Recitals</button>
+        <button data-gallery-filter="felicitations" class="px-5 py-2 rounded-full text-sm font-medium border border-ink/15">Felicitations</button>
+        <button data-gallery-filter="events" class="px-5 py-2 rounded-full text-sm font-medium border border-ink/15">Events</button>
+      </div>
+
+      <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <!-- rendered by js/gallery.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div id="lightbox" class="lightbox-overlay hidden fixed inset-0 z-[100] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button id="lightbox-close" aria-label="Close image viewer" class="absolute top-5 right-5 text-ivory w-11 h-11 rounded-full border border-ivory/30 flex items-center justify-center hover:border-amber transition-colors">
+      <i data-lucide="x" class="w-5 h-5"></i>
+    </button>
+    <button id="lightbox-prev" aria-label="Previous image" class="absolute left-3 sm:left-8 text-ivory w-11 h-11 rounded-full border border-ivory/30 flex items-center justify-center hover:border-amber transition-colors">
+      <i data-lucide="chevron-left" class="w-5 h-5"></i>
+    </button>
+    <button id="lightbox-next" aria-label="Next image" class="absolute right-3 sm:right-8 text-ivory w-11 h-11 rounded-full border border-ivory/30 flex items-center justify-center hover:border-amber transition-colors">
+      <i data-lucide="chevron-right" class="w-5 h-5"></i>
+    </button>
+    <div class="max-w-4xl w-full">
+      <img id="lightbox-image" src="" alt="" class="w-full max-h-[75vh] object-contain rounded-lg" />
+      <div class="flex items-center justify-between mt-4 text-ivory/70 text-sm">
+        <p id="lightbox-caption"></p>
+        <p id="lightbox-counter"></p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/content.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/decor.js"></script>
+<script src="js/gallery.js"></script>
+<script>
+  window.addEventListener("load", () => { if (window.lucide) window.lucide.createIcons(); });
+</script>
+</body>
+</html>
