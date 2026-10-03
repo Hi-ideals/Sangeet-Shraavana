@@ -44,13 +44,19 @@ sangeet-shraavana/
 │   ├── gallery.js         ← gallery grid + lightbox
 │   ├── modal.js           ← shared popup used by events
 │   ├── decor.js           ← floating note + corner instrument decoration
+│   ├── music.js           ← background flute music + floating play/pause button
 │   └── form.js            ← form validation (no backend connected — see TODO in file)
+├── assets/audio/krishna-flute.mp3  ← background music (change `SRC` in js/music.js to swap it)
 └── assets/images/         ← add your images here, matching the paths in content.js
 ```
 
 ## Adding images
 
 Drop images into the matching subfolder under `assets/images/` (e.g. `assets/images/faculty/faculty-1.jpg`) using the exact filename referenced in `content.js`. Until real images are added, placeholder images render automatically so the layout never breaks.
+
+## Background music
+
+The flute track starts on every page. Browsers don't allow sound to begin without a tap, click or key press, so on most devices it begins at the visitor's first tap/click (scrolling alone doesn't count). The song continues from the same spot when moving between pages, and the round button at the bottom-left pauses it for good until the visitor turns it back on. Volume and fade-in are set at the top of `js/music.js`.
 
 ## Notes
 
